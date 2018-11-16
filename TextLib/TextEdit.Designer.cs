@@ -1,4 +1,4 @@
-﻿namespace TextEdit4
+﻿namespace TextLib
 {
     partial class TextEdit
     {

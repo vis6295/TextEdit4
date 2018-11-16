@@ -1,4 +1,4 @@
-﻿namespace TextEdit4
+﻿namespace Common
 {
     partial class LogForm
     {

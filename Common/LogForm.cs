@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TextEdit4
+namespace Common
 {
     public partial class LogForm : Form
     {

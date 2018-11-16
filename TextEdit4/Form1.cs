@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Common;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TextLib;
 
 namespace TextEdit4
 {
@@ -24,7 +26,7 @@ namespace TextEdit4
 
             textEdit.Dock = System.Windows.Forms.DockStyle.Fill;
             textEdit.BackColor = Color.Black;
-            textEdit.Parent = this;
+            textEdit.Parent = tabPage1;
             textEdit.BringToFront();
             //this.textEdit.Location = new System.Drawing.Point(0, 0);
             //this.textEdit.Name = "panel2";
@@ -56,6 +58,17 @@ namespace TextEdit4
         private void button2_Click(object sender, EventArgs e)
         {
             MessageBox.Show($"{ClientSize.Width} : {ClientSize.Height}\n{textEdit.Width} : {textEdit.Height}");
+        }
+
+        private void Form1_Resize(object sender, EventArgs e)
+        {
+            //base.OnResize(e);
+            LogForm.msg($"form OnResize: {Width} / {Height}\n\tsize: {Size.Width} / {Size.Height}");
+        }
+
+        private void Form1_SizeChanged(object sender, EventArgs e)
+        {
+            LogForm.msg($"form OnSizeChanged: {Width} / {Height}\n\tsize: {Size.Width} / {Size.Height}");
         }
     }
 }
